@@ -24,3 +24,20 @@ cc_library_shared {
     compile_multilib: "64",
     vendor: true
 }
+
+cc_library_shared {
+    name: "wfdshim",
+    proprietary: true,
+    defaults: ["hidl_defaults"],
+    srcs: [
+        "wfdshim.cpp",
+    ],
+    cflags: [
+        "-Werror",
+        "-Wextra",
+        "-Wall",
+    ],
+    shared_libs: [
+        "libutils",
+    ],
+}
