@@ -27,7 +27,6 @@ cc_library_shared {
 
 cc_library_shared {
     name: "wfdshim",
-    proprietary: true,
     defaults: ["hidl_defaults"],
     srcs: [
         "wfdshim.cpp",
